@@ -1,0 +1,26 @@
+{
+  "name": "intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . Dozer --overwrite",
+    "build:arm": "electron-packager . Dozer --arch=armv7l --platform=linux --overwrite",
+    "rebuild": "electron-rebuild"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "",
+    "gpio": "^0.2.7",
+    "jquery": "",
+    "path": "",
+    "rpi-gpio": "^0.8.1"
+  },
+  "devDependencies": {
+    "electron-packager": "",
+    "electron": "",
+    "electron-rebuild": ""
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . main --overwrite",
+    "rebuild": "electron-rebuild -f -w serialport"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.6.11",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "nan": "^2.6.2",
+    "path": "^0.12.7",
+    "request": "^2.79.0",
+    "serialport": "4.0.7"
+  },
+  "devDependencies": {
+    "electron": "",
+    "electron-packager": "",
+    "electron-rebuild": "^1.5.11"
+  }
+}

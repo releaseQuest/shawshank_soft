@@ -1,0 +1,10 @@
+{
+   "port": {
+      "name": "COM4",
+      "speed": 19200
+   },
+  "checkTimeout": 5000,
+  "camsVideo": "192.168.3.2:4000",
+  "firstVideo": "192.168.1.68:4000",
+  "reqTimeout": 15000
+}

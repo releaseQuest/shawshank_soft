@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <title>Shawshank admin controller</title>
+</head>
+
+<body>
+  <audio id="boom" src="./boomSound.mp3"></audio>
+  <div id="controls">
+    <h4>Сервис:</h4>
+    <div class="row main"> <div class="text">Главный контроллер:</div><div class="status-led"></div></div>
+    <div class="row manual"> <div class="text">Ручное управление:</div><input id="manual" type="checkbox"></div>
+     
+  </div> 
+  <div id="camera">  
+    <h4>Камера:</h4>
+    <div class="row"><div class="text"></div> <span>Тест</span> <span class="shifted">Статус</span> <span  class="shifted">Ручное</span></div>
+    <div class="row first-video"> <div class="text">Первое видео:</div> <div class="test-led"> </div> <div class="status-led"></div> <button class="fire">Огонь</button> <button class="shut" hidden>Выключить</button> <button class="reset" hidden>Сброс</button></div>
+    <div class="row sigarets"> <div class="text">Сигареты:</div> <div class="test-led"></div> <div class="status-led"></div> <button class="voice">Голос</button><button class="fire" hidden>Огонь</button><button class="open" hidden>Открыть</button><button class="close" hidden>Закрыть</button><button class="manual" hidden>Ручной</button><button class="auto" hidden>Авто</button></div>
+    <div class="row scotch"> <div class="text">Скотч:</div> <div class="test-led"></div> <div class="status-led"></div> <button class="fire">Огонь</button><button class="voice1">Голос до</button><button class="voice2">Голос после</button><button class="open" hidden>Открыть</button><button class="close" hidden>Закрыть</button></div>
+  </div>
+  <div id="office">
+    <h4>Офис:</h4>
+    <div class="row"><div class="text"></div> <span>Тест</span> <span class="shifted">Статус</span> <span  class="shifted">Ручное</span></div>
+    <div class="row cams"> <div class="text">Камеры наблюдения:</div> <div class="test-led"></div> <div class="status-led"></div> <button class="shut" hidden>Выключить</button> <button class="reset" hidden>Сброс</button> </div>
+    <div class="row light"> <div class="text">Свет:</div> <div class="test-led"></div> <div class="status-led"></div> <button class="on" hidden>Включить</button> <button class="off" hidden>Выключить</button> <button class="main_off" hidden>Выключить общий</button> </div>
+    <div class="row post"> <div class="text">Почта:</div> <div class="test-led"></div> <div class="status-led"></div> <button class="fire" hidden>Огонь</button> <button class="open" hidden>Открыть</button> <button class="close" hidden>Закрыть</button></div>
+    <div class="row door"> <div class="text">Дверь:</div> <div class="test-led"></div> <div class="status-led"></div> <button class="fire" hidden>Огонь</button><button class="stop" hidden>Стоп</button> </div>
+    <div class="row fan"> <div class="text">Вентилятор:</div> <div class="test-led"></div> <div class="status-led"></div> <button class="open" hidden>Старт</button><button class="close" hidden>Стоп</button> </div>
+    <div class="row grid"> <div class="text">Решетка:</div> <div class="test-led"></div> <div class="status-led"></div> <button class="fire" hidden>Огонь</button> <button class="open" hidden>Открыть</button><button class="close" hidden>Закрыть</button></div>
+    <div class="row lock"> <div class="text">Замок:</div> <div class="test-led"></div> <div class="status-led"></div> <button class="fire" hidden>Огонь</button> <button class="open" hidden>Открыть</button> <button class="close" hidden>Закрыть</button> <div class="battery">Заряд: 100%</div><div class="gun">/ 100%</div></div>
+
+  </div>
+  <div id="hints">
+    <h4>Подсказки:</h4>
+    
+    <h5>Имена:</h5>
+    <form class="names">
+      <input type="radio" class="name-item" name="name" value="null" checked> Всем
+    </form>
+    <h5>Действия:</h5>
+    
+    <form class="actions"></form>
+    <button id="warning">Дать подсказку</button>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>

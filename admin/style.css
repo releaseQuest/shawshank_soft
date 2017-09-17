@@ -1,0 +1,178 @@
+body {
+  font-family: verdana
+}
+
+h4 {
+  margin: 5px
+}
+
+h5 {
+  margin: 10px
+}
+
+span.shifted {
+  margin-left: 30px
+}
+
+#test {
+  height: 26px;
+  margin-left: 100px;
+}
+
+#manual {
+  margin-left: 21px;
+}
+.fire {
+  height: 26px;
+  margin-left: 15px;
+}
+
+.voice {
+  height: 26px;
+  margin-left: 15px;
+}
+
+.manual {
+  height: 26px;
+  margin-left: 15px;
+}
+
+.auto {
+  height: 26px;
+  margin-left: 15px;
+}
+
+.reset {
+  height: 26px;
+  margin-left: 15px;
+}
+.main_off {
+  height: 26px;
+  margin-left: 15px;
+}
+
+.stop {
+  height: 26px;
+  margin-left: 15px;
+}
+
+.voice1, .voice2 {
+  height: 26px;
+  margin-left: 15px; 
+}
+.on {
+  height: 26px;
+  margin-left: 15px; 
+}
+.off {
+  height: 26px;
+  margin-left: 15px; 
+}
+.open {
+  height: 26px;
+  margin-left: 15px; 
+}
+.close {
+  height: 26px;
+  margin-left: 15px; 
+}
+.shut {
+  height: 26px;
+  margin-left: 15px; 
+}
+.row {
+  margin: 10px;
+  height: 29px;
+  margin-left: 15px;
+  margin-bottom: 15px
+}
+
+.text {
+  width: 200px;
+  display: inline-block
+}
+
+.test-led {
+  height: 12px;
+  width: 12px;
+  border: solid 2px lightgray;
+  border-radius: 50%;
+  background-color: slategray;
+  display: inline-block;
+  margin-top: 4px;
+  margin-left: 10px;
+  margin-right: 40px
+}
+
+.status-led {
+  height: 12px;
+  width: 12px;
+  border: solid 2px lightgray;
+  border-radius: 50%;
+  background-color: slategray;
+  display: inline-block;
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 40px
+}
+.battery {
+  display: inline-block;
+  margin-left: 40px;
+  margin-right: 5px;
+  margin-top: 5px
+}
+
+.gun{
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 5px
+}
+#controls, #camera, #office, #hints {
+  border: solid 2px lightgray;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 880px
+  
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: greenyellow;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.grey {
+  background-color: slategray;
+}
+
+.action-item {
+  -webkit-transform: scale(1.5);
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.name-item {
+  -webkit-transform: scale(1.5);
+  margin-left: 10px;
+}
+
+.actions {
+  font-size: 16px;
+}
+
+.names {
+  font-size: 16px;
+}
+
+#warning {
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
