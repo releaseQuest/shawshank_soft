@@ -24,14 +24,18 @@
 #define servo_0 3 // right - tray
 #define rx_tx 4
 #define servo_1 5 // left - trigger
+#define servo_2 9 // bottom - door
 
 #define TRAY_OPEN 100
 #define TRAY_CLOSE 22
 #define TRIGGER_ARMED 160
 #define TRIGGER_FIRE 100
+#define DOOR_OPEN 100
+#define DOOR_CLOSE 22
 
 Servo servo0;
 Servo servo1;
+Servo servo2;
 
 SoftwareSerial df(8, 7); // RX, TX
 
@@ -54,9 +58,12 @@ void setup() {
   servo0.write(TRAY_OPEN);
   servo1.attach(servo_1);
   servo1.write(TRIGGER_FIRE);
+  servo2.attach(servo_2);
+  servo2.write(DOOR_OPEN);
   delay(500);
   servo0.detach();
   servo1.detach();
+  servo2.detach();
 
   inputString.reserve(200);
   Serial.begin(9600);
@@ -149,6 +156,10 @@ void manage() {
 
 
 void fire() {
+  servo2.attach(servo_2);
+  servo2.write(DOOR_OPEN);
+  delay(500);
+  servo2.detach();
   servo0.attach(servo_0);
   delay(50);
   servo0.write(TRAY_CLOSE);
@@ -163,19 +174,29 @@ void fire() {
   stat = "triggered";
   delay(1500);
   servo0.detach();
+  servo2.attach(servo_2);
+  servo2.write(DOOR_CLOSE);
+  delay(500);
+  servo2.detach();
 }
 
 void door(bool open) {
   delay(50);
   if (open) {
-    digitalWrite(relay, HIGH);
-    delay(200);
+    digitalWrite(relay, LOW);
+    servo2.attach(servo_2);
+    servo2.write(DOOR_OPEN);
+    delay(500);
+    servo2.detach();
     Serial.print("{\"tape\":\"opened\"}\n");
     Serial.flush();
     stat = "opened";
   } else {
-    digitalWrite(relay, LOW);
-    delay(200);
+    digitalWrite(relay, HIGH);
+    servo2.attach(servo_2);
+    servo2.write(DOOR_CLOSE);
+    delay(500);
+    servo2.detach();
     Serial.print("{\"tape\":\"closed\"}\n");
     Serial.flush();
     stat = "closed";
